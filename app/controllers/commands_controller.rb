@@ -31,13 +31,15 @@ class CommandsController < ApplicationController
       return
     end
 
-    secret, opts = params[:text].split(' ')
-    if opts
-      days, views = opts.split(',')
-    end
+    # secret, opts = params[:text].split(' ')
+    # if opts
+    #  days, views = opts.split(',')
+    # end
+    
+    secret = params[:text]
 
     if ["help", '-h', 'usage'].include?(secret.downcase)
-      render plain: "Usage /pwpush <password> [days,views]", layout: false
+      render plain: "Usage /pwpush <password>", layout: false
       return
     elsif BAD_PASSWORDS.include?(secret.downcase)
       render plain: "Come on.  Do you really want to use that password?  Put in a bit of effort and try again.", layout: false
