@@ -1,4 +1,5 @@
 {
+  "stack": "heroku-24",
   "name": "PasswordPusher",
   "description": "An application to communicate passwords over the web. Passwords expire after a certain number of views and/or time has passed.",
   "repository": "https://github.com/pglombardo/PasswordPusher",
